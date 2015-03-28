@@ -8,7 +8,8 @@ FinalizarController  = {
 					FinalizarController.cancelarProva);
 		},
 		finalizarProva:function(){
-			FinalizarController.ajax(LoginController.login,LoginController.hash);
+			//compara
+			alert("Mostra resultado");
 		},
 		cancelarProva:function(){
 			FinalizarController.voltarHome();
@@ -20,9 +21,9 @@ FinalizarController  = {
 				reloadPage : true
 			});
 		},
-		ajax : function(login,hash) {
+		ajax : function() {
 			
-			var values = {
+			/*var values = {
 				beforeSend : function() {
 					$.mobile.loading('show');
 				}, // Show spinner
@@ -36,7 +37,7 @@ FinalizarController  = {
 				success : FinalizarController.onSuccess,
 				error : FinalizarController.onError
 			};
-			$.ajax(values);
+			$.ajax(values);*/
 		},
 
 		onSuccess : function(response) {

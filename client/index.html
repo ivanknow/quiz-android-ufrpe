@@ -10,30 +10,24 @@
 <script src="js/Controller.js"></script>
 <script src="js/HTMLMaker.js"></script>
 <script src="js/Snippets.js"></script>
+<script src="js/Base.js"></script>
 <script src="js/ProvaExecucao.js"></script>
 <script src="js/Prova.js"></script>
-<script src="js/Login.js"></script>
 <script src="js/Finalizar.js"></script>
 <script src="js/App.js"></script>
 </head>
 <body>
-	<div id="login" data-role="page">
+	<div id="home" data-role="page">
 		<div data-role="header" data-position="fixed">
-			<h3 class="html-from-values" appid="appTitle"></h3>
+			<h3 class="html-from-values" appid="appTitleProva"></h3>
+			<span class="html-from-snippet-array" snippet="snippet-btn-sair"></span>
 		</div>
 		<div role="main" class="ui-content">
-		<label for="email" class="ui-hidden-accessible">E-mail</label>
-				<input type="email" name="textEmail" id="textEmail" value=""
-					placeholder="E-mail">
-					
-		<label for="password" class="ui-hidden-accessible">Senha</label>
-				<input type="password" name="textPassword" id="textPassword" value=""
-					placeholder="Senha">
-		
-		<button id="btnLogin" data-icon="check" class="ui-btn ui-corner-all" data-iconpos="right">Entrar </button>
+			<ul data-role="listview" id="divListaProva" data-split-icon="action"
+				data-split-theme="d" data-inset="true">
+				<!-- Conteudo inserido dinamicamente Prova.js -->
+			</ul>
 		</div>
-		<div data-role="footer" data-position="fixed"
-			class="html-from-snippet-array" snippet="snippet-footer"></div>
 	</div>
 </body>
 </html>

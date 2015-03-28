@@ -3,12 +3,15 @@
 /*Dependences: jQuery,Values*/
 
 Controller = function(urlRequest,linkClass,param,attr) {
+
 	
 	var 
 	items = [],
 	item = null,
 	urlFinal="",
 	idSelected=0;
+	
+	
 	
 	var 
 	urlRequest = urlRequest||"",
@@ -24,12 +27,15 @@ Controller = function(urlRequest,linkClass,param,attr) {
 	}
 
 	function getAll() {
-		urlFinal = urlRequest;
-		doRequestGet(onSuccessGetAll, onError);
+		all = Base.all;
+		
+		onSuccessGetAll(all);
 	}
-	function getById(id) { 
-	urlFinal = urlRequest+"/"+id;
-		doRequestGet(onSuccessGetById, onError);
+	function getById(id) {
+		
+		 item = Base.getById(id);
+
+		onSuccessGetById(item)
 	}
 	function reloadSelectedItem() { 
 		
@@ -37,22 +43,20 @@ Controller = function(urlRequest,linkClass,param,attr) {
 	}
 	function clickItem() {
 		idSelected = $(this).attr(attr);
+		
 		getById(idSelected);
 	}
 	function onSuccessGetAll(response) {
 		items = response.items;
 		showScreenList(items);
 	}
-	function onSuccessGetById(response) {
-		item = response.item;
+	function onSuccessGetById(item) {
+		
 		showItem(item);
 	}
 
-	function onError(response) {
-		alert("fail");
-	}
 
-	function doRequestGet(onSuccess, onError) {
+	/*function doRequestGet(onSuccess, onError) {
 		var values = {
 		beforeSend: function() { $.mobile.loading( 'show'); }, //Show spinner
 	    complete: function() { $.mobile.loading( 'hide'); }, //Hide spinner
@@ -67,7 +71,7 @@ Controller = function(urlRequest,linkClass,param,attr) {
 		$.ajax(values);
 
 
-	}
+	}*/
 	function showScreenList(items) {
 		alert(JSON.stringify(items));
 	}
