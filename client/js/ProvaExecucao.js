@@ -58,11 +58,11 @@ ProvaExecucaoController = function() {
 		var questao = getQuestaoAtual();
 
 		switch (questao.tipo) {
-		case 0: // aberto
+		case "aberta": // aberto
 			var text = $("#fieldtextRespostaAberta").val();
 			questao.resposta = text;
 			break;
-		case 1: // fechada
+		case "fechada": // fechada
 			questao.resposta = $("input[type='radio']:checked").val();
 			break;
 		}
@@ -75,20 +75,20 @@ ProvaExecucaoController = function() {
 		var contador = HTMLMaker().createTag("h4").content(
 				"(" + (questaoSelecionadaIndex + 1) + " de "
 						+ getQuestaoCount() + ")");
-		$('#questaoEnunciado').html(questao.enunciado + "" + contador.show());
+		$('#questaoEnunciado').html(questao.titulo + "" + contador.show());
 
 		$(".divResposta").each(function() {
 			$(this).hide();
 		});
 
 		switch (questao.tipo) {
-		case 0: // aberto
+		case "aberta": // aberto
 			// mostra aberta
 			$("#fieldtextRespostaAberta").val(questao.resposta || "");
 			$("#fieldRespostaAberta").show();
 			break;
 
-		case 1: // fechada
+		case "fechada": // fechada
 			$("#fieldRespostaFechada").html("");
 			var snippetItem = Snippets
 					.getSnippet('snippet-item-resposta-fechada');
@@ -99,7 +99,7 @@ ProvaExecucaoController = function() {
 				html += snippetItem.updateAttr("id", t).updateAttr("value", t)
 						.show();
 				html += snippetItemLabel.updateAttr("for", t).content(
-						questao.alternativas[t]).show();
+						questao.alternativas[t].titulo).show();
 			}
 			$("#fieldRespostaFechada").html(html);
 			$("input[type='radio']").checkboxradio();
@@ -151,9 +151,12 @@ ProvaExecucaoController = function() {
 $(document).on("pagebeforecreate", "#responder", function() {
 	try {
 		ProvaExecucaoController.init();
+		if(ProvaExecucaoController.provaSelecionada==null || ProvaExecucaoController.provaSelecionada.questoes.length == 0){
+		throw new Error("Prova sem questões");
+		}
 	} catch (err) {
 		//TODO 
-		alert(Values.messageErroServidor);
+		alert(Values.messageErroServidor+":"+JSON.stringify(err));
 		window.location = "index.html";
 	}
 });

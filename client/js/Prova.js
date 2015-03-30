@@ -21,7 +21,7 @@ ProvaController.setShowScreenList(function(items) {
 	}
 
 	$("#divListaProva").html(html);
-	//$('#divListaProva').listview('refresh');
+	
 
 });
 
@@ -41,8 +41,26 @@ $(document).on("pagebeforecreate", "#home", function() {
 
 });
 
+$(document).on("pagebeforecreate", "#home", function() {
+
+	ProvaController.init();
+
+});
+
+$(document).on("pagebeforecshow", "#home", function() {
+
+	ProvaController.getAll();
+	$('#divListaProva').listview('refresh');
+
+});
+
+
+
 $(document).on("pagebeforecreate", "#iniciarprova", function() {
-
+	try{
 		ProvaController.reloadSelectedItem()
-
+	}catch(err){
+		alert(Values.messageErroServidor);
+		window.location = "index.html";
+	}
 });

@@ -8,18 +8,13 @@ FinalizarController  = {
 					FinalizarController.cancelarProva);
 		},
 		finalizarProva:function(){
-			//compara
-			alert("Mostra resultado");
+			
 		},
 		cancelarProva:function(){
 			FinalizarController.voltarHome();
 		},
 		voltarHome:function(){
-			$.mobile.changePage("home.html", {
-				allowSamePageTransition : true,
-				showLoadMsg : true,
-				reloadPage : true
-			});
+			window.location = "index.html";
 		},
 		ajax : function() {
 			

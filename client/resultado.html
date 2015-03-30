@@ -10,19 +10,23 @@
 <script src="js/Controller.js"></script>
 <script src="js/HTMLMaker.js"></script>
 <script src="js/Snippets.js"></script>
+<script src="js/Base.js"></script>
 <script src="js/ProvaExecucao.js"></script>
 <script src="js/Prova.js"></script>
+<script src="js/Finalizar.js"></script>
 <script src="js/App.js"></script>
 </head>
 <body>
-	<div id="responder" data-role="page">
+	<div id="resultado" data-role="page">
 		<div data-role="header" data-position="fixed">
 			<h3 class="html-from-values" appid="appTitleProva"></h3>
 		</div>
 		<div role="main" class="ui-content">
-			
+			<ul data-role="listview" id="divListaProva" data-split-icon="action"
+				data-split-theme="d" data-inset="true">
+				<!-- Conteudo inserido dinamicamente Resultado.js -->
+			</ul>
 		</div>
 	</div>
-	
 </body>
 </html>

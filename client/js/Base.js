@@ -5,7 +5,21 @@ Base = {
 			id : 1,
 			"titulo" : "Quiz 1",
 			"autor" : "Professor Gilberto",
-			"questoes" : [],
+			"questoes" : [ {
+				"titulo" : "teste?",
+				"tipo" : "aberta"
+			}, {
+				"titulo" : "teste b",
+				"tipo" : "aberta"
+			}, {
+				"titulo" : "voce gosta de biscoito?",
+				"alternativas" : [ {
+					"titulo" : "Sim"
+				}, {
+					"titulo" : "Não"
+				} ],
+				"tipo" : "fechada"
+			} ],
 			"data" : "28/03/2015"
 		}, {
 			id : 2,
@@ -16,13 +30,12 @@ Base = {
 		} ]
 	},
 	getById : function(id) {
-		for(var i=0;i<Base.all.items.length;i++){
-			if(Base.all.items[i].id==id){
-				return Base.all['items'][i];	
+		for (var i = 0; i < Base.all.items.length; i++) {
+			if (Base.all.items[i].id == id) {
+				return Base.all['items'][i];
 			}
 		}
-		
-		
+
 	}
 
 };
