@@ -71,7 +71,7 @@ ProvaExecucaoController = function() {
 
 	function carregaQuestaoTela() {
 		var questao = getQuestaoAtual();
-
+		
 		var contador = HTMLMaker().createTag("h4").content(
 				"(" + (questaoSelecionadaIndex + 1) + " de "
 						+ getQuestaoCount() + ")");
