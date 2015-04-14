@@ -105,7 +105,7 @@ Base = {
 	},//fim questa 6
 
 	{//questa 7
-	"titulo" : "...Dever do Estado e direito público subjetivo... se refere a:",
+	"titulo" : "Qual a finalidade do ensino superior:",
 	
 	"alternativas" : [
 	
