@@ -144,6 +144,25 @@ Base = {
 	},//fim questa 11
 
 	]//fim questao
+        },{ "id": "2",
+            "titulo": "Quiz Android 1",
+            "autor": "Monitoria UFRPE",
+	        "data" : "26/04/2015",
+            "questoes": [//questao
+                {//questa 1
+	  "titulo" : "A Plataforma Android inclue vários componentes. Qual dos componentes listados a seguir NÃO faz parte da Plataforma Android?:",
+	
+	"alternativas" : [
+	 {"titulo" : "Kit de Desenvolvimento de Software(SDK)"},
+   	 {"titulo" : "Ferramentas de analise de protocolo de rede" },
+	 {"titulo" : "Pilha de Software"},
+	 {"titulo" : "Documentação"}
+	],
+	
+	"tipo" : "fechada"
+	},//fim questa 1
+            ]
+            
         }
 	]//fim itens
 	},
