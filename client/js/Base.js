@@ -9,7 +9,7 @@ Base = {
             "questoes": [//questao
                 {//questa 1
 	  "titulo" : "A Plataforma Android inclue vários componentes. Qual dos componentes listados a seguir NÃO faz parte da Plataforma Android?:",
-	  "gabarito":"2",
+	  "gabarito":"0",
 	
 	"alternativas" : [
 	 {"titulo" : "Kit de Desenvolvimento de Software(SDK)"},
