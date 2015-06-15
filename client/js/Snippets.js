@@ -37,7 +37,7 @@ var Snippets = {
 								"width: 100%").content(Values.appFooterAbout)
 			},
 			{
-				id : 'snippet-footer-questpes',
+				id : 'snippet-footer-questoes',
 				value : HTMLMaker().createTag("a")
 						.attr("href", "questoes.html").attr("data-transition",
 								"slideup")

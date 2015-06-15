@@ -156,7 +156,7 @@ $(document).on("pagebeforecreate", "#responder", function() {
 		}
 	} catch (err) {
 		//TODO 
-		alert(Values.messageErroServidor+":"+JSON.stringify(err));
+		alert(Values.messageErroServidor);
 		window.location = "index.html";
 	}
 });
