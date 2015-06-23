@@ -33,7 +33,7 @@ var Snippets = {
 				id : 'snippet-footer',
 				value : HTMLMaker().createTag("a").attr("href", "about.html")
 						.attr("data-transition", "slideup").attr("class",
-								"ui-btn ui-corner-all").attr("style",
+								"ui-btn ui-corner-all ui-icon-bars ui-btn-icon-top").attr("style",
 								"width: 100%").content(Values.appFooterAbout)
 			},
 			{

@@ -12,7 +12,7 @@ var Values = {
 	appTitleAbout : "Prova Móvel - Sobre",
 	appFooterAbout : "Sobre",
 	mensagemFinalizarSucesso : "Respostas enviada com sucesso!",
-	messageErroServidor:"Houve um erro na comunicação com servidor",
+	messageErroServidor:"Você está sendo redirecionado para a tela inicial!",
 	messageUsuarioDeveLogar:"Usuario deve estar logado",
 	pages : {},
 
